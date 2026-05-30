@@ -20,7 +20,7 @@ resource "aws_security_group" "redis" {
   tags = merge(
     local.common_tags,
     tomap({
-      "Name"      = "sgCacheCluster" ##look into
+      "Name" = "sgCacheCluster" ##look into
     })
   )
 
@@ -34,7 +34,7 @@ resource "aws_security_group" "redis" {
   # )
 
   lifecycle {
-      create_before_destroy = true
-  } 
+    create_before_destroy = true
+  }
 
 }
